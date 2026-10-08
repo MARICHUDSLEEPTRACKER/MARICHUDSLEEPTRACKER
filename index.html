@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#11121a">
+  <title>Marijan Sleep Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="top">
+      <div class="moonmark">☾</div>
+      <div><p class="eyebrow">THE VERY OFFICIAL</p><h1>MARIJAN<br><span>SLEEP TRACKER</span></h1></div>
+      <div class="live"><i></i> LIVE STATUS</div>
+    </header>
+
+    <section class="status-card" aria-live="polite">
+      <div class="status-copy">
+        <p class="eyebrow">CURRENTLY</p>
+        <h2 id="status-title">Loading status…</h2>
+        <p id="status-subtitle" class="muted">Connecting to the tracker</p>
+        <p id="updated" class="updated"></p>
+      </div>
+      <img id="status-image" src="sleeping.jpeg" alt="Marijan's current status">
+    </section>
+
+    <section class="legend">
+      <div><span class="dot awake-dot"></span><b>AWAKE</b><small>Pic 1</small></div>
+      <div><span class="dot sleep-dot"></span><b>ASLEEP</b><small>Pic 2</small></div>
+    </section>
+
+    <details class="admin">
+      <summary>Change status <span>＋</span></summary>
+      <form id="status-form">
+        <label for="secret-code">Enter your status code</label>
+        <div class="entry"><input id="secret-code" type="password" placeholder="Secret code" autocomplete="off" required><button type="submit">UPDATE</button></div>
+        <p id="feedback" role="status" class="feedback">Only the two status codes can change the tracker.</p>
+      </form>
+    </details>
+    <footer>Unofficial Marijan status board · For fun</footer>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
